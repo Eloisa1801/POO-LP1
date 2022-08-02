@@ -1,4 +1,3 @@
-package classes;
 public class Conta_poupanca{
 
     private String nome1;
@@ -7,13 +6,19 @@ public class Conta_poupanca{
     private int conta1;
     private double saldo1;
 
+
+    public Conta_poupanca(double saldo_inicial){
+        this.saldo1 = saldo_inicial;
+
+    }
+
     public Conta_poupanca(String name1){
         System.out.println("Criando o objeto:" + name1);
     }
 
     public void setNome1(String n1){
-        this.nome = n1;
-        
+        this.nome1 = n1;
+
     }
 
     public String getNome1() {
@@ -41,9 +46,9 @@ public class Conta_poupanca{
     public int getConta1() {
         return this.conta1;
     }
-    public void setSaldo1(double saldo1){
-        this.saldo1 = saldo1;
-    }
+    // public void setSaldo1(double saldo1){
+    //     this.saldo1 = saldo1;
+    // }
     public double getSaldo1() {
         return this.saldo1;   
     }
@@ -56,12 +61,15 @@ public class Conta_poupanca{
     }
 
     public boolean depositar(double valor1) {
-        this.saldo1 += valor1;
-        return true;
+        if(valor1 >0){
+            this.saldo1 += valor1;
+            return true;
+        }
+        return false;
     }
 
     public boolean sacar(double valor1) {
-        if (valor1 < saldo1) {
+        if (valor1 >0 && valor1 <= saldo1) {
             this.saldo1 -= valor1;
            return true;
         }
@@ -69,6 +77,8 @@ public class Conta_poupanca{
            return false;
         }
     }
+
+    //Ao sacar, informar quantas notas de 5, 10 e 50
 
     public double exibirSaldo() {
         return this.saldo1;
