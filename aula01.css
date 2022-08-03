@@ -1,0 +1,30 @@
+
+.container{
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 1.3rem 1.3rem 0rem 1.3rem;
+    background-color: rgb(169, 132, 204);
+}
+.perfil{
+    margin: 1rem;
+    width: 150px;
+    height: 150px;;
+    border: 1px solid black;
+    border-radius: 1.3rem;
+    background-color: rgb(241, 226, 158);
+}
+
+.box1{
+    display: flex;
+    
+}
+.container .dados{
+    padding: 2rem;
+    
+}
+
+.box2{
+    text-align:justify;
+    margin: 1rem;
+}
