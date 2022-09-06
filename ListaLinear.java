@@ -20,6 +20,7 @@ public class ListaLinear {
         l = addInicio(l, 10);
         l = addInicio(l, 5);
         l = addInicio(l, 1);
+        l = addFim(l, 8);
         printLista(l);
     }
         //Lista l = new iniciarLista();
@@ -67,7 +68,7 @@ public class ListaLinear {
             }
             
             No aux = l.inicio;
-                while(aux != null){
+                while(aux.prox != null){
                 aux = aux.prox;
             }
             aux.prox = novo;
