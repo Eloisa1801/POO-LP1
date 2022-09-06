@@ -21,6 +21,8 @@ public class ListaLinear {
         l = addInicio(l, 5);
         l = addInicio(l, 1);
         l = addFim(l, 8);
+        l = addFim(l, 3);
+        l = addInicio(l, 0);
         printLista(l);
     }
         //Lista l = new iniciarLista();
